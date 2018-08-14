@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Vue.js simple SPA example</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <h1>Vue.js ファイル分割デモ</h1>
+        htmlファイルとjsファイルを分割した状態で動作させるデモ
+        <h1>
+            Login(Correct Login Name: myLoginName)
+        </h1>
+        <p>
+            <div id="loginaccount">
+                <p>{{ loginaccountname }}</p> <!--ここには入力したlogin名が表示される。実際には取る-->
+                <input v-model="loginaccountname">
+            </div><!--<input id="loginAccount">-->
+        </p>
+        <h1>
+            Password(Correct Password: mySecretPassword1234)
+        </h1>
+        <p>
+            <div id="loginpassword">
+                <p>{{ loginpassword }}</p> <!--ここには入力したパスワードが表示される。実際には取る-->
+                <input type="password" v-model="loginpassword">
+            </div><!--<input type="password" id="loginPassword">-->
+        </p>
+        <p>
+            <div id="loginsubmit">
+                <button v-on:click="checklogin">ログイン</button>
+            </div>
+            <!--<input type="submit" value="ログイン" id="loginSubmit">-->
+        </p>
+        <h1>
+            Result
+        </h1>
+        <p id="loginResult"></p>
+    </body>
+</html>
